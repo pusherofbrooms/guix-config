@@ -28,7 +28,8 @@
   (firmware (list linux-firmware))
   (locale "en_US.utf8")
   (timezone "America/New_York")
-  (keyboard-layout (keyboard-layout "us"))
+  (keyboard-layout (keyboard-layout "us"
+				    #:options '("ctrl:nocaps")))
   (host-name "ideapad-jlj")
 
   ;; The list of user accounts ('root' is implicit).
@@ -45,7 +46,10 @@
   ;; for packages and 'guix install PACKAGE' to install a package.
   (packages (append (specifications->packages (list
 					       "nss-certs"
-					       "sway"))
+					       "sway"
+					       "swaylock"
+					       "swayidle"
+					       "swaybg"))
 		    %base-packages))
 
   ;; Below is the list of system services.  To search for available
