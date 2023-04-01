@@ -8,19 +8,28 @@
              (gnu packages)
              (gnu services)
              (guix gexp)
-             (gnu home services shells))
+             (gnu home services shells)
+             (gnu home services ssh))
 
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
  (packages (specifications->packages (list
-                                      "emacs-next"
+                                      ;; emacs and friends
+                                      "emacs-next-pgtk"
+                                      "emacs-geiser"
+                                      "emacs-geiser-guile"
+                                      "emacs-magit"
+                                      "emacs-multi-vterm"
+                                      "emacs-vterm"
+                                      ;; various tools
 				      "foot"
 				      "fuzzel"
 				      "git"
 				      "htop"
 				      "kanshi"
 				      "keepassxc"
+                                      "nmap"
                                       "openssh"
                                       "setxkbmap"
                                       "ungoogled-chromium"
@@ -39,4 +48,5 @@
                                              "bashrc")))
                    (bash-profile (list (local-file
                                         ".bash_profile"
-                                        "bash_profile"))))))))
+                                        "bash_profile")))))
+         (service home-ssh-agent-service-type))))
