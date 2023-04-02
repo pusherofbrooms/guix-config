@@ -8,8 +8,10 @@
              (gnu packages)
              (gnu services)
              (guix gexp)
+             (gnu home services)
              (gnu home services shells)
              (gnu home services ssh))
+
 
 (home-environment
   ;; Below is the list of packages that will show up in your
@@ -49,4 +51,8 @@
                    (bash-profile (list (local-file
                                         ".bash_profile"
                                         "bash_profile")))))
-         (service home-ssh-agent-service-type))))
+         (service home-ssh-agent-service-type)
+         (service home-xdg-configuration-files-service-type
+                  `(("kanshi/config" ,(local-file "kanshi-config"))
+                     ("sway/config" ,(local-file "sway-config"))))
+         )))
