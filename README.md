@@ -19,3 +19,9 @@ How does one apply this config to their compute?
 1. Run `sudo -E guix system reconfigure ~/.config/guix/system.scm` to adjust the global operating system.
 1. Reboot if you received a new kernel update.
 1. Run `guix home reconfigure ~/.config/guix/guix-home/home-configuration.scm` to update your user profile.
+
+Todo:
+ * Pull in sway and kanshi config files to `guix home`
+ * How do I deal with my customized `.inputrc` properly. It looks like it isn't managed in the shell services yet.
+ * Figure out the "best" way to manage emacs configuration and packages
+ * Sort out how to package up some of the Cloud Foundry tools that I use at work. They don't exist in guix repos yet.
