@@ -9,7 +9,7 @@ I have the feeling (yes, emotions and hunches, not data) that functional package
  * GUIX almost completely abandons FHS. No binaries are in /usr/bin. No libraries are in /usr/lib. Most config files are not in /etc.
  * You are going to struggle to compile source unless you completely embrace the package manager.
  * GUIX has a smaller pool of people contributing, so some things which are mature on Nix are less mature or less featureful on GUIX.
- * GUIX forbids non-free software, blobs, kernel modules. This means microcode for your CPU, no blobs for most wifi, no nvidia support unless you add a non-free channel like [nonguix](https://gitlab.com/nonguix/nonguix). This is a little tedious and there isn't an automated way yet to manage this, but the system crafters link below walks you through installation with nonguix.
+ * GUIX forbids non-free software, blobs, kernel modules. This means no microcode for your CPU, no blobs for most wifi, no nvidia support unless you add a non-free channel like [nonguix](https://gitlab.com/nonguix/nonguix). This is a little tedious and there isn't an automated way yet to manage this, but the system crafters link below walks you through installation with nonguix.
 
 ## Setup
 
