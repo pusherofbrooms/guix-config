@@ -73,6 +73,8 @@
                    (aliases '(("grep" . "grep --color=auto")
 			      ("ll" . "ls -l")
                               ("ls" . "ls -p --color=auto")))
+                   (environment-variables
+                    `(("EDITOR" . "emacs")))
                    (bashrc (list (local-file ".bashrc"
                                              "bashrc")))
                    (bash-profile (list (local-file
@@ -81,5 +83,5 @@
          (service home-ssh-agent-service-type)
          (service home-xdg-configuration-files-service-type
                   `(("kanshi/config" ,(local-file "kanshi-config"))
-                     ("sway/config" ,(local-file "sway-config"))))
+                    ("sway/config" ,(local-file "sway-config"))))
          )))
